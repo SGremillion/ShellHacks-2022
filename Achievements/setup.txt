@@ -1,66 +1,24 @@
-10
-Meow meow meow
-1
-Alphabet
-2
-Meow
-3
-Hellow World
 4
-asdfasdf
+Went to the Gym
+15
+Ate Healthy
 5
-asdf
-6
-sdfsdf
-7
-sdsdfsdf
-8
-asdf
-9
-asdf
-10
-10
-Too Much To Eat
-1
-Alphabet
+Drank Less Coffee
+5
+Used Less Sugar
 2
-Meow
-3
-Hellow World
-4
-asdfasdf
-5
-asdf
-6
-sdfsdf
-7
-sdsdfsdf
-8
-asdf
-9
-asdf
-10
-10
-Sushi night
-1
-Alphabet
 2
-Meow
-3
-Hellow World
-4
-asdfasdf
+Too Much Candy
 5
-asdf
-6
-sdfsdf
-7
-sdsdfsdf
-8
-asdf
-9
-asdf
+Ate Terribly
 10
-500 20 -262 
+3
+Free Day
+1000
+Sushi
+500
+Candy Bar
+100
+130 115 5 
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-09 September 2022
+x

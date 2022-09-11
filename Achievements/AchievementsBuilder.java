@@ -726,7 +726,6 @@ public class AchievementsBuilder {
 			for(int ii = 0; ii < spendList.size(); ii++) {
 				outputFile.println(spendList.get(ii));
 			}
-			outputFile.println("");
 			for(int ii = 0; ii < 3; ii++) {
 				outputFile.print("0");
 				outputFile.print(" ");
@@ -736,6 +735,8 @@ public class AchievementsBuilder {
 				outputFile.print("0");
 				outputFile.print(" ");
 			}
+			outputFile.println("");
+			outputFile.println("x");
 			outputFile.close();
 		}
 		catch(FileNotFoundException ex) {
