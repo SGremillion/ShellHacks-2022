@@ -726,8 +726,15 @@ public class AchievementsBuilder {
 			for(int ii = 0; ii < spendList.size(); ii++) {
 				outputFile.println(spendList.get(ii));
 			}
+			outputFile.println("");
 			for(int ii = 0; ii < 3; ii++) {
-				outputFile.println("0");
+				outputFile.print("0");
+				outputFile.print(" ");
+			}
+			outputFile.println("");
+			for(int ii = 0; ii < 42; ii++) {
+				outputFile.print("0");
+				outputFile.print(" ");
 			}
 			outputFile.close();
 		}
