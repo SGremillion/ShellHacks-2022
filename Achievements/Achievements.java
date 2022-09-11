@@ -21,6 +21,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
 import java.awt.event.WindowEvent;
+import java.awt.event.*;
 
 public class Achievements {
 	public static void main(String[] args) {
@@ -619,12 +620,80 @@ public class Achievements {
 		 * press listeners
 		 **********************************************/
 
+		MouseListener genericListener = new java.awt.event.MouseAdapter() {
+			public void mouseEntered(java.awt.event.MouseEvent evt) {
+				if(evt.getSource() == updateWeight) {
+					updateWeight.setIcon(new ImageIcon("Graphics/MainButtonHover.png"));
+				}
+				else if(evt.getSource() == updateGoal) {
+					updateGoal.setIcon(new ImageIcon("Graphics/MainButtonHover.png"));
+				}
+				else if(evt.getSource() == exerciseResetBtn) {
+					exerciseResetBtn.setIcon(new ImageIcon("Graphics/ResetHover.png"));
+				}
+				else if(evt.getSource() == exit) {
+					exit.setIcon(new ImageIcon("Graphics/ExitHover.png"));
+				}
+				else if(evt.getSource() == tableBtnOne) {
+					tableBtnOne.setIcon(new ImageIcon("Graphics/MiniHover.png"));
+				}
+				else if(evt.getSource() == tableBtnTwo) {
+					tableBtnTwo.setIcon(new ImageIcon("Graphics/MiniHover.png"));
+				}
+				else if(evt.getSource() == tableBtnThree) {
+					tableBtnThree.setIcon(new ImageIcon("Graphics/MiniHover.png"));
+				}
+				else if(evt.getSource() == tableBtnFour) {
+					tableBtnFour.setIcon(new ImageIcon("Graphics/MiniHover.png"));
+				}
+				else if(evt.getSource() == tableBtnFive) {
+					tableBtnFive.setIcon(new ImageIcon("Graphics/MiniHover.png"));
+				}
+				else if(evt.getSource() == tableBtnSix) {
+					tableBtnSix.setIcon(new ImageIcon("Graphics/MiniHover.png"));
+				}
+			}
+			public void mouseExited(java.awt.event.MouseEvent evt) {
+				if(evt.getSource() == updateWeight) {
+					updateWeight.setIcon(new ImageIcon("Graphics/MainButton.png"));
+				}
+				else if(evt.getSource() == updateGoal){
+					updateGoal.setIcon(new ImageIcon("Graphics/MainButton.png"));
+				}
+				else if(evt.getSource() == exerciseResetBtn) {
+					exerciseResetBtn.setIcon(new ImageIcon("Graphics/Reset.png"));
+				}
+				else if(evt.getSource() == exit) {
+					exit.setIcon(new ImageIcon("Graphics/Exit.png"));
+				}
+				else if(evt.getSource() == tableBtnOne) {
+					tableBtnOne.setIcon(new ImageIcon("Graphics/Mini.png"));
+				}
+				else if(evt.getSource() == tableBtnTwo) {
+					tableBtnTwo.setIcon(new ImageIcon("Graphics/Mini.png"));
+				}
+				else if(evt.getSource() == tableBtnThree) {
+					tableBtnThree.setIcon(new ImageIcon("Graphics/Mini.png"));
+				}
+				else if(evt.getSource() == tableBtnFour) {
+					tableBtnFour.setIcon(new ImageIcon("Graphics/Mini.png"));
+				}
+				else if(evt.getSource() == tableBtnFive) {
+					tableBtnFive.setIcon(new ImageIcon("Graphics/Mini.png"));
+				}
+				else if(evt.getSource() == tableBtnSix) {
+					tableBtnSix.setIcon(new ImageIcon("Graphics/Mini.png"));
+				}
+			}
+		};
+
 		// update weight listeners
 		updateWeight.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				displayDialog("updateweight", dataList, weightNumber, currentWeightLabel, baseFrame, differenceNumber, differenceWeightLabel);
 			}
 		});
+		updateWeight.addMouseListener(genericListener);
 
 		// update goal listeners
 		updateGoal.addActionListener(new ActionListener() {
@@ -632,6 +701,7 @@ public class Achievements {
 				displayDialog("updategoal", dataList, goalNumber, goalWeightLabel, baseFrame, differenceNumber, differenceWeightLabel);
 			}
 		});
+		updateGoal.addMouseListener(genericListener);
 
 		// exercise reset listeners
 		exerciseResetBtn.addActionListener(new ActionListener() {
@@ -643,6 +713,7 @@ public class Achievements {
 				displayChecks(dataList, exerciseTable, exerciseLayout);
 			}
 		});
+		exerciseResetBtn.addMouseListener(genericListener);
 
 		// exercise buttons listeners
 		tableBtnOne.addActionListener(new ActionListener() {
@@ -652,6 +723,7 @@ public class Achievements {
 				updateLastWorkout(dataList, lastWorkout, lastDate, exerciseLastDate, dateToday, dateFormat);
 			}
 		});
+		tableBtnOne.addMouseListener(genericListener);
 		tableBtnTwo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				changeCheck(2, weekDay, dataList);
@@ -659,6 +731,7 @@ public class Achievements {
 				updateLastWorkout(dataList, lastWorkout, lastDate, exerciseLastDate, dateToday, dateFormat);
 			}
 		});
+		tableBtnTwo.addMouseListener(genericListener);
 		tableBtnThree.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				changeCheck(3, weekDay, dataList);
@@ -666,6 +739,7 @@ public class Achievements {
 				updateLastWorkout(dataList, lastWorkout, lastDate, exerciseLastDate, dateToday, dateFormat);
 			}
 		});
+		tableBtnThree.addMouseListener(genericListener);
 		tableBtnFour.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				changeCheck(4, weekDay, dataList);
@@ -673,6 +747,7 @@ public class Achievements {
 				updateLastWorkout(dataList, lastWorkout, lastDate, exerciseLastDate, dateToday, dateFormat);
 			}
 		});
+		tableBtnFour.addMouseListener(genericListener);
 		tableBtnFive.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				changeCheck(5, weekDay, dataList);
@@ -680,6 +755,7 @@ public class Achievements {
 				updateLastWorkout(dataList, lastWorkout, lastDate, exerciseLastDate, dateToday, dateFormat);
 			}
 		});
+		tableBtnFive.addMouseListener(genericListener);
 		tableBtnSix.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				changeCheck(6, weekDay, dataList);
@@ -687,6 +763,7 @@ public class Achievements {
 				updateLastWorkout(dataList, lastWorkout, lastDate, exerciseLastDate, dateToday, dateFormat);
 			}
 		});
+		tableBtnSix.addMouseListener(genericListener);
 
 		// add action listeners
 		addOne.addActionListener(new ActionListener() {
@@ -850,6 +927,8 @@ public class Achievements {
 				saveExit(addList, subList, spendList, dataList, lastWorkout, baseFrame);
 			}
 		});
+		exit.addMouseListener(genericListener);
+
 		baseFrame.addWindowListener(new WindowListener() {
 			public void windowClosing(WindowEvent e) {
 				saveExit(addList, subList, spendList, dataList, lastWorkout, baseFrame);
